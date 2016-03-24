@@ -1,6 +1,6 @@
 ## custom terminal settings
 
-Displays this everytime you load up the terminal or sign into ssh
+Displays the stuff below in terminal everytime you load up the terminal or sign into ssh
 * hostname
 * cpu
 * address
