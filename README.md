@@ -18,7 +18,6 @@ Figlet package and a PxPlus IBM VGA 10 font installed
 http://www.figlet.org/
 
 
-
 [.bashrc] with my prompt and some shopt commands
 and [config] is a terminator config file 
 
