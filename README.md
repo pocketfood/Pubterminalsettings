@@ -21,7 +21,7 @@ http://www.figlet.org/
 
 https://github.com/briggsoft/Pubterminalsettings/blob/master/font/PxPlus_IBM_VGA8.ttf
 
-[.bashrc] with my prompt and some shopt commands
+[.bashrc] with my prompt with some shopt commands
 and [config] is a terminator config file 
 
 will be making a pkg soon.
