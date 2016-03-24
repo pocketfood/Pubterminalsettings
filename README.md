@@ -13,7 +13,7 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * packages
 
 ## Dependencies
-Figlet package and a PxPlus IBM VGA 10 font installed
+Figlet package and PxPlus IBM VGA 10 font have to be installed
 
 http://www.figlet.org/
 
