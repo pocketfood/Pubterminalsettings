@@ -12,3 +12,7 @@ Displays this everytime you load up the terminal or sign into ssh
 * processes
 * packages
 
+[.bashrc] with my prompt and some shopt commands
+and [config] is a terminator config file 
+
+will be making a pkg soon.
