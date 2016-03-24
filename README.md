@@ -12,6 +12,8 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * processes
 * packages
 
+# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm.png?raw=true)
+
 ## Dependencies
 Figlet package and PxPlus IBM VGA 10 font have to be installed
 
