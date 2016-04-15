@@ -11,7 +11,6 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * sessions
 * processes
 * packages
-* 
 
 ```shell
 cp motd.sh /etc/profile.d
