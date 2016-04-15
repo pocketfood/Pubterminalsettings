@@ -11,6 +11,16 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * sessions
 * processes
 * packages
+* 
+
+```shell
+cp motd.sh /etc/profile.d
+cp config /.config/terminator/
+cp .bashc /home/$USER/
+cp .bashrc /usr/share/fonts/
+```
+
+
 
 # ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm.png?raw=true)
 
