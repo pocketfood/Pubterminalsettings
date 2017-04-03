@@ -3,6 +3,7 @@
 Displays the stuff below in terminal everytime you load up the terminal or sign into ssh
 * hostname
 * cpu
+* gpu
 * address
 * Uptime
 * memory
@@ -11,6 +12,8 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * sessions
 * processes
 * packages
+* User Rules text :)
+
 
 ```shell
 cp motd.sh /etc/profile.d
@@ -25,12 +28,12 @@ cp .bashrc /usr/share/fonts/
 
 ## Dependencies
 Figlet package and PxPlus IBM VGA 10 font have to be installed
-
 http://www.figlet.org/
 
-https://github.com/briggsoft/Pubterminalsettings/blob/master/font/PxPlus_IBM_VGA8.ttf
 
+# This font is optional but will look ugly in terminator
+https://github.com/briggsoft/Pubterminalsettings/blob/master/font/PxPlus_IBM_VGA8.ttf
 [.bashrc] with my prompt with some shopt commands
-and [config] is a terminator config file 
+and [config] is a terminator config file
 
 will be making a pkg soon.
