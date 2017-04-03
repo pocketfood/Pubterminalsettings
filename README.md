@@ -24,7 +24,7 @@ cp .bashrc /usr/share/fonts/
 
 
 
-# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm.png?raw=true)
+# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm2.png?raw=true)
 
 ## Dependencies
 Figlet package and PxPlus IBM VGA 10 font have to be installed
