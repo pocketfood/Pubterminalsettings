@@ -16,11 +16,13 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * packages
 * User Rules text :)
 
-# Motd-debian 
+# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm2.png?raw=true)
+
+# Motd-debian
 Its a little bit differnt from the Arch one and I plan on merging the two files together
 * Hostname
 * Address
-* Kernal 
+* Kernal
 * Uptime
 * Memory
 * Username
@@ -28,7 +30,7 @@ Its a little bit differnt from the Arch one and I plan on merging the two files 
 * Sessions
 * Processes
 * User Rules text :)
- 
+
 
 ```shell
 cp motd.sh /etc/profile.d
@@ -39,8 +41,6 @@ cp .zshrc /home/$USER/
 ```
 
 
-
-# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm2.png?raw=true)
 
 ## Dependencies
 Figlet package and PxPlus IBM VGA 10 font have to be installed
