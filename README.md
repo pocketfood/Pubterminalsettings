@@ -13,13 +13,14 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * processes
 * packages
 * User Rules text :)
-
+ 
 
 ```shell
 cp motd.sh /etc/profile.d
 cp config /.config/terminator/
 cp .bashc /home/$USER/
 cp .bashrc /usr/share/fonts/
+cp .zshrc /home/$USER/
 ```
 
 
@@ -36,4 +37,5 @@ https://github.com/briggsoft/Pubterminalsettings/blob/master/font/PxPlus_IBM_VGA
 [.bashrc] with my prompt with some shopt commands
 and [config] is a terminator config file
 
-will be making a pkg soon.
+will be making a pkg soon for AUR.
+Planning on making it for multiple distros so far only works for Arch...duh. Of course.
