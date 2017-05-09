@@ -31,7 +31,7 @@ Its a little bit differnt from the Arch one and I plan on merging the two files 
 * Processes
 * User Rules text :)
 
-
+## Installation
 ```shell
 cp motd.sh /etc/profile.d
 cp config /.config/terminator/
