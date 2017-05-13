@@ -16,7 +16,9 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * packages
 * User Rules text :)
 
+
 # ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm2.png?raw=true)
+
 
 # Motd-debian
 Its a little bit differnt from the Arch one and I plan on merging the two files together
@@ -40,8 +42,6 @@ cp .bashrc /usr/share/fonts/
 cp .zshrc /home/$USER/
 ```
 
-
-
 ## Dependencies
 Figlet package and PxPlus IBM VGA 10 font have to be installed
 http://www.figlet.org/
@@ -56,3 +56,5 @@ and [config] is a terminator config file
 will be making a pkg soon for AUR maybe even APT. Shurg.
 Planning on making it for multiple distros so far only works for Arch...duh. Of course.
 For Debian the figlet text is difffernt but still the text from hostname.
+
+
