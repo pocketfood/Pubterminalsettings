@@ -47,8 +47,8 @@ Figlet package and PxPlus IBM VGA 10 font have to be installed
 http://www.figlet.org/
 
 
-## This font is optional but will look ugly in terminator
-https://github.com/briggsoft/Pubterminalsettings/blob/master/font/PxPlus_IBM_VGA8.ttf
+## Install the PxPlus Font Package
+https://github.com/briggsoft/Fontpkg-PxPlus_IBM_VGA8
 [.bashrc] with my prompt with some shopt commands
 and [config] is a terminator config file
 
