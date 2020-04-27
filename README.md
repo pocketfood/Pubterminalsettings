@@ -17,7 +17,7 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * User Rules text :)
 
 
-# ![image](https://github.com/briggsoft/Pubterminalsettings/blob/master/images/pubterm2.png?raw=true)
+# ![image](https://removed)
 
 
 # Motd-debian
