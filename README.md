@@ -5,23 +5,20 @@ Displays the stuff below in terminal everytime you load up the terminal or sign 
 * hostname
 * cpu
 * gpu
-* address
+* address for LOCAL and VPN
 * Uptime
 * Kernal
 * memory
 * username
 * privlages
 * sessions
+* Storage Used
 * processes
 * packages
-* User Rules text :)
-
-
-# ![image](https://removed)
-
+* Home directory count
 
 # Motd-debian
-Its a little bit differnt from the Arch one and I plan on merging the two files together
+Its a little bit differnt from the Arch one and I plan on merging the two files together.. Someday.
 * Hostname
 * Address
 * Kernal
@@ -53,7 +50,7 @@ https://github.com/briggsoft/Fontpkg-PxPlus_IBM_VGA8
 and [config] is a terminator config file
 
 ## Little Notes
-will be making a pkg soon for AUR maybe even APT. Shurg.
+will be making a pkg build for AUR maybe even APT.
 Planning on making it for multiple distros so far only works for Arch...duh. Of course.
 For Debian the figlet text is difffernt but still the text from hostname.
 
