@@ -1,6 +1,6 @@
 #!/bin/bash
-#
 #clear
+#This script is for Arch Linux Systems
 PROCCOUNT=`ps -Afl | wc -l`
 PROCCOUNT=`expr $PROCCOUNT - 5`
 GROUPZ=`groups`
@@ -27,11 +27,12 @@ figlet -f standard `hostname`
 #System info and user info here
 echo -e "\e[1;35m+++++++++++++++++: \e[1;37mMachine Info\e[1;35m :+++++++++++++++++++
 \e[1;35m+ \e[1;37mhostname\e[1;35m = \e[1;32m`hostname`
-\e[1;35m+ \e[1;37mAddress \e[1;35m = \e[1;32m`ip address | grep 'inet '| grep -v '127.0.0.1'| cut -d: -f2 |awk '{print $2}'| sed -e 's/^[ \t]*//'`
+\e[1;35m+ \e[1;37mAddress \e[1;35m =\e[1;32m`ip address | grep 'inet '| grep -v '127.0.0.1'|cut -d: -f2 |awk '{print $2,$7}'|sed -e 's/^[ \t]*/ /' |tr -d '[\n]'`
 \e[1;35m+ \e[1;37mKernel  \e[1;35m = \e[1;32m`uname -r`
 \e[1;35m+ \e[1;37mUptime  \e[1;35m = \e[1;32m`uptime | sed 's/.*up ([^,]*), .*/1/'| sed -e 's/^[ \t]*//'`
 \e[1;35m+ \e[1;37mCPU     \e[1;35m = \e[1;32m`lscpu | grep 'Model name:' | cut -d: -f2 |awk '{print $0}' | sed -e 's/^[ \t]*//'`
-\e[1;35m+ \e[1;37mGPU     \e[1;35m = \e[1;32m`lspci | grep '680' | cut -d: -f3 |awk '{print $0}'| sed -e 's/^[ \t]*//'`
+\e[1;35m+ \e[1;37mGPU     \e[1;35m = \e[1;32m`lspci | grep 'VGA' | cut -d: -f3 |awk '{print $0}'| sed -e 's/^[ \t]*//'`
+\e[1;35m+ \e[1;37mStorage \e[1;35m =\e[1;32m`df -h /dev/sda4 | awk '{print$5}'| sed -e 's/^[ \t]*/ /' | tr -d '[\n]'`
 \e[1;35m+ \e[1;37mMemory  \e[1;35m = \e[1;32m`cat /proc/meminfo | grep MemTotal | awk {'print $2'}` kB
 \e[1;35m++++++++++++++++++: \e[1;37mUser Info\e[1;35m :+++++++++++++++++++++
 \e[1;35m+ \e[1;37mUsername \e[1;35m = \e[1;32m`whoami`
@@ -39,7 +40,5 @@ echo -e "\e[1;35m+++++++++++++++++: \e[1;37mMachine Info\e[1;35m :++++++++++++++
 \e[1;35m+ \e[1;37mSessions \e[1;35m = \e[1;32m`who | grep $USER | wc -l` of $ENDSESSION MAX
 \e[1;35m+ \e[1;37mProcesses\e[1;35m = \e[1;32m$PROCCOUNT of `ulimit -u` MAX
 \e[1;35m+ \e[1;37mPackages \e[1;35m = \e[1;32m`pacman -Qq | wc -l`
-\e[1;35m++++++++++++++++++: \e[1;37mRules\e[1;35m :+++++++++++++++++++++++++
-\e[1;32m Encrypt everything and backup the important files.
-\e[1;32m Be nice to the machine. Have a to do list.
-\e[1;32m        HAVE A SAFE AND PRODUCTIVE DAY."
+\e[1;35m+ \e[1;37mHomecount\e[1;35m = \e[1;32m`ls /home/$USER/ | wc -l`
+\e[1;35m++++++++++++++++++++++++++++++++++++++++++++++++++++"
