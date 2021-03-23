@@ -45,7 +45,7 @@ http://www.figlet.org/
 
 
 ## Install the PxPlus Font Package
-https://github.com/briggsoft/Fontpkg-PxPlus_IBM_VGA8
+https://github.com/pocketfood/Fontpkg-PxPlus_IBM_VGA8
 [.bashrc] with my prompt with some shopt commands
 and [config] is a terminator config file
 
