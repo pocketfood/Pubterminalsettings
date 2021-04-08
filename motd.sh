@@ -24,6 +24,7 @@ fi
 #You need Figlet installed in order to display the banner
 echo -e "\e[1;37m"
 figlet -f standard `hostname`
+
 #System info and user info here
 echo -e "\e[1;35m+++++++++++++++++: \e[1;37mMachine Info\e[1;35m :+++++++++++++++++++
 \e[1;35m+ \e[1;37mhostname\e[1;35m = \e[1;32m`hostname`
