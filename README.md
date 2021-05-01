@@ -34,7 +34,7 @@ Its a little bit differnt from the Arch one and I plan on merging the two files 
 ```shell
 cp motd.sh /etc/profile.d
 cp config /.config/terminator/
-cp .bashc /home/$USER/
+cp .bashrc /home/$USER/
 cp .bashrc /usr/share/fonts/
 cp .zshrc /home/$USER/
 ```
