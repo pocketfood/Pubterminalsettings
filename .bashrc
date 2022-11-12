@@ -1,5 +1,3 @@
-source /etc/profile
-
 # This changes terminal bash text you can also embed commands to it
 # each time you make a command it updates
 
