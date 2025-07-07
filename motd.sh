@@ -14,8 +14,6 @@ GPU=`lspci | grep 'VGA' | cut -d: -f3 |awk '{print $0}'| sed -e 's/^[ \t]*//'`
 STORAGE=`df -h /dev/sda4 | awk '{print$5}'| sed -e 's/^[ \t]*/ /' | tr -d '[\n]'`
 MEMORY=`cat /proc/meminfo | grep MemTotal | awk {'print $2'}`
 
-
-
 ## Check what kind of user are you 
 if [[ $GROUPZ == *irc* ]];
 then
@@ -54,4 +52,4 @@ echo -e "\e[1;35m+++++++++++++++++: \e[1;37mMachine Info\e[1;35m :++++++++++++++
 \e[1;35m+ \e[1;37mProcesses\e[1;35m = \e[1;32m$PROCCOUNT of `ulimit -u` MAX
 \e[1;35m+ \e[1;37mPackages \e[1;35m = \e[1;32m`pacman -Qq | wc -l`
 \e[1;35m+ \e[1;37mHomecount\e[1;35m = \e[1;32m`ls /home/$USER/ | wc -l`
-\e[1;35m++++++++++++++++++++++++++++++++++++++++++++++++++++"
+\e[1;35m++++++++++++++++++++++++++++++++++++++++++++++++++++\e[0m"
