@@ -13,16 +13,27 @@ CPU=`lscpu | grep 'Model name:' | cut -d: -f2 |awk '{print $0}' | sed -e 's/^[ \
 GPU=`lspci | grep 'VGA' | cut -d: -f3 |awk '{print $0}'| sed -e 's/^[ \t]*//'`
 MEMORY=`cat /proc/meminfo | grep MemTotal | awk {'print $2'}`
 
-# Visual Storage Bar
-STORAGE_TOTAL=$(df -BG /dev/sda4 | awk 'NR==2 {gsub("G","",$2); print $2}')
-STORAGE_AVAIL=$(df -BG /dev/sda4 | awk 'NR==2 {gsub("G","",$4); print $4}')
-STORAGE_USED=$((STORAGE_TOTAL - STORAGE_AVAIL))
+# Visual Storage Bars for all real mounted devices (exclude tmpfs etc.)
+STORAGE_VISUAL=""
 BAR_LENGTH=10
-FILLED=$((STORAGE_USED * BAR_LENGTH / STORAGE_TOTAL))
-EMPTY=$((BAR_LENGTH - FILLED))
-BAR=$(printf "%0.s█" $(seq 1 $FILLED))
-BAR+=$(printf "%0.s░" $(seq 1 $EMPTY))
-STORAGE_VISUAL="$BAR  ${STORAGE_AVAIL} GB of storage left"
+
+df -BG | grep "^/dev/" | while read DEV TOTAL USED AVAIL PERCENT MOUNT; do
+  DEV_NAME=$(basename "$DEV")
+  TOTAL=${TOTAL%G}
+  USED=${USED%G}
+  AVAIL=${AVAIL%G}
+
+  # Handle any weird edge case of zero total
+  if [[ "$TOTAL" -eq 0 ]]; then
+    continue
+  fi
+
+  FILLED=$((USED * BAR_LENGTH / TOTAL))
+  EMPTY=$((BAR_LENGTH - FILLED))
+  BAR=$(printf "%0.s█" $(seq 1 $FILLED))
+  BAR+=$(printf "%0.s░" $(seq 1 $EMPTY))
+  STORAGE_VISUAL+="\e[1;35m+ \e[1;37mDisk ($MOUNT) \e[1;35m= \e[1;32m$BAR  ${AVAIL} GB left\n"
+done
 
 ## Check what kind of user are you 
 if [[ $GROUPZ == *irc* ]];
@@ -53,8 +64,7 @@ echo -e "\e[1;35m+++++++++++++++++: \e[1;37mMachine Info\e[1;35m :++++++++++++++
 \e[1;35m+ \e[1;37mUptime  \e[1;35m = \e[1;32m$UPTIME
 \e[1;35m+ \e[1;37mCPU     \e[1;35m = \e[1;32m$CPU
 \e[1;35m+ \e[1;37mGPU     \e[1;35m = \e[1;32m$GPU
-\e[1;35m+ \e[1;37mStorage \e[1;35m = \e[1;32m$STORAGE_VISUAL
-\e[1;35m+ \e[1;37mMemory  \e[1;35m = \e[1;32m$MEMORY Kb
+$STORAGE_VISUAL\e[1;35m+ \e[1;37mMemory  \e[1;35m = \e[1;32m$MEMORY Kb
 \e[1;35m++++++++++++++++++: \e[1;37mUser Info\e[1;35m :+++++++++++++++++++++
 \e[1;35m+ \e[1;37mUsername \e[1;35m = \e[1;32m`whoami`
 \e[1;35m+ \e[1;37mPrivlages\e[1;35m = \e[1;32m$PRIVLAGED
